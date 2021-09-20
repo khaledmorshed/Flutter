@@ -28,6 +28,7 @@ class MySplashScreenOne extends StatelessWidget {
           width: double.infinity,
           //alignment: Alignment.end,
           child: Column(
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset("assets/Images/img91.png",
               //width: 10.0,
