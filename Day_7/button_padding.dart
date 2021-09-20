@@ -1,34 +1,45 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Myrow_colApp());
+  runApp(MySplashScreenOne());
 }
 
-class Myrow_colApp extends StatelessWidget {
-  const Myrow_colApp({ Key? key }) : super(key: key);
+class MySplashScreenOne extends StatelessWidget {
+  const MySplashScreenOne({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Row Col App"),
+          title: Text("splash Screen"),
         ),
         body: Column(
-            children: [Padding(padding: EdgeInsets.all(10.0), child: ElevatedButton(
-              onPressed: (){}
-            , child: Padding(padding: EdgeInsets.all(10.0),
-            child: Text("Button1"),
-            )
-            ),
-            ),
-            ElevatedButton(onPressed: (){},
-             child: Text("Button2")
-             )
-            ],
+          children: [
+            ElevatedButton
+          (onPressed: (){}
+          , child: Icon(Icons.access_alarm_sharp),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.cyanAccent
           ),
-
-        ),   
+          ),
+          ElevatedButton
+          (onPressed: (){}
+          , child: Icon(Icons.access_alarm_sharp)
+          ),
+          SizedBox(
+            width: 100.0,
+            height: 100.0,
+            child: ElevatedButton
+            (onPressed: (){}
+            , child: Icon(Icons.access_alarm_sharp)
+            ),
+          ),
+          
+          ],
+        )
+      ),
     );
   }
 }
